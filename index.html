@@ -12,34 +12,35 @@
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
   </head>
   <body>
     <div class="relative flex h-auto min-h-screen w-full flex-col bg-white group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
       <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f5] px-10 py-3">
-          <div class="flex items-center gap-6 text-[#111418]">
-            <div class="size-6">
-              <!--<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path></svg>-->
-              <img alt="logo inteligencia com experiencia" href="./logo.jpg"/>
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f5] px-8 py-4">
+          <!-- LOGO -->
+          <div class="flex items-center gap-10 text-[#111418]">
+            <div class="w-120 h-16">
+              <img alt="logo inteligencia com experiencia" src="./logo.jpg" class="w-full h-full object-contain" />
             </div>
-            <!--<h2 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">AI Solutions</h2>-->
           </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Sobre nós</a>
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Serviços</a>
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Principais dores</a>
-              <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Contato</a>
-            </div>
+
+          <!-- LINKS + BOTÃO -->
+          <div class="flex flex-1 justify-end gap-14">
+            <nav class="flex items-center gap-14">
+              <a data-target="sobre-nos" class="text-[#111418] text-xl font-semibold leading-normal hover:text-[#0680f9] transition-colors cursor-pointer">Sobre nós</a>
+              <a data-target="servicos" class="text-[#111418] text-xl font-semibold leading-normal hover:text-[#0680f9] transition-colors cursor-pointer">Serviços</a>
+              <a data-target="principais-dores" class="text-[#111418] text-xl font-semibold leading-normal hover:text-[#0680f9] transition-colors cursor-pointer">Principais dores</a>
+            </nav>
             <button
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#0680f9] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+              class="whatsappButton flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-8 bg-[#0680f9] text-white text-lg font-bold leading-normal tracking-[0.015em] hover:bg-[#0568c5] transition"
             >
               <span class="truncate">Fale com um especialista</span>
             </button>
           </div>
         </header>
         <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+          <div class="layout-content-container flex flex-col max-w-[1150px] flex-1">
             <div class="@container">
               <div class="@[480px]:p-4">
                 <div
@@ -50,103 +51,186 @@
                     <h1
                       class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
                     >
-                      Transforme seu negócio com Inteligência Artificial.
+                      Nós não vendemos ferramentas </br> entregamos transformação.
                     </h1>
                     <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
-                      Impulsione a inovação e a eficiência com soluções de IA personalizadas para o seu negócio.
+                      Com nossa consultoria de IA, sua empresa ganha eficiência, inovação e vantagem competitiva de verdade.
                     </h2>
                   </div>
                   <button
-                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#0680f9] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                    class="whatsappButton flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#0680f9] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
                   >
                     <span class="truncate">Fale com um especialista</span>
                   </button>
                 </div>
               </div>
             </div>
-            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Sobre nós</h2>
-            <p class="text-[#111418] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              Somos uma empresa especializada em soluções de Inteligência Artificial (IA) e consultoria para empresas. Nossa expertise abrange machine learning, IA generativa e
-              automação inteligente, ajudando empresas a inovar e otimizar processos.
-            </p>
-            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Serviços</h2>
-            <div class="flex flex-col gap-10 px-4 py-10 @container">
-              <div class="flex flex-col gap-4">
-                <h1
-                  class="text-[#111418] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]"
-                >
-                  Nossos serviços de IA
-                </h1>
-                <p class="text-[#111418] text-base font-normal leading-normal max-w-[720px]">Oferecemos um conjunto completo de serviços para integrar a IA em seu negócio.</p>
-              </div>
-              <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-0">
-                <div class="flex flex-1 gap-3 rounded-lg border border-[#dbe0e6] bg-white p-4 flex-col">
-                  <div class="text-[#111418]" data-icon="Code" data-size="24px" data-weight="regular">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M69.12,94.15,28.5,128l40.62,33.85a8,8,0,1,1-10.24,12.29l-48-40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3Zm176,27.7-48-40a8,8,0,1,0-10.24,12.3L227.5,128l-40.62,33.85a8,8,0,1,0,10.24,12.29l48-40a8,8,0,0,0,0-12.29ZM162.73,32.48a8,8,0,0,0-10.25,4.79l-64,176a8,8,0,0,0,4.79,10.26A8.14,8.14,0,0,0,96,224a8,8,0,0,0,7.52-5.27l64-176A8,8,0,0,0,162.73,32.48Z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div class="flex flex-col gap-1">
-                    <h2 class="text-[#111418] text-base font-bold leading-tight">Desenvolvimento sob medida</h2>
-                    <p class="text-[#5f758c] text-sm font-normal leading-normal">Criação de soluções de IA personalizadas para atender às suas necessidades específicas.</p>
-                  </div>
-                </div>
-                <div class="flex flex-1 gap-3 rounded-lg border border-[#dbe0e6] bg-white p-4 flex-col">
-                  <div class="text-[#111418]" data-icon="Gear" data-size="24px" data-weight="regular">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.71,107.71,0,0,0-26.25-10.87,8,8,0,0,0-7.06,1.49L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Zm-16.1-6.5a73.93,73.93,0,0,1,0,8.68,8,8,0,0,0,1.74,5.48l14.19,17.73a91.57,91.57,0,0,1-6.23,15L187,173.11a8,8,0,0,0-5.1,2.64,74.11,74.11,0,0,1-6.14,6.14,8,8,0,0,0-2.64,5.1l-2.51,22.58a91.32,91.32,0,0,1-15,6.23l-17.74-14.19a8,8,0,0,0-5-1.75h-.48a73.93,73.93,0,0,1-8.68,0,8,8,0,0,0-5.48,1.74L100.45,215.8a91.57,91.57,0,0,1-15-6.23L82.89,187a8,8,0,0,0-2.64-5.1,74.11,74.11,0,0,1-6.14-6.14,8,8,0,0,0-5.1-2.64L46.43,170.6a91.32,91.32,0,0,1-6.23-15l14.19-17.74a8,8,0,0,0,1.74-5.48,73.93,73.93,0,0,1,0-8.68,8,8,0,0,0-1.74-5.48L40.2,100.45a91.57,91.57,0,0,1,6.23-15L69,82.89a8,8,0,0,0,5.1-2.64,74.11,74.11,0,0,1,6.14-6.14A8,8,0,0,0,82.89,69L85.4,46.43a91.32,91.32,0,0,1,15-6.23l17.74,14.19a8,8,0,0,0,5.48,1.74,73.93,73.93,0,0,1,8.68,0,8,8,0,0,0,5.48-1.74L155.55,40.2a91.57,91.57,0,0,1,15,6.23L173.11,69a8,8,0,0,0,2.64,5.1,74.11,74.11,0,0,1,6.14,6.14,8,8,0,0,0,5.1,2.64l22.58,2.51a91.32,91.32,0,0,1,6.23,15l-14.19,17.74A8,8,0,0,0,199.87,123.66Z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div class="flex flex-col gap-1">
-                    <h2 class="text-[#111418] text-base font-bold leading-tight">Integração de IA</h2>
-                    <p class="text-[#5f758c] text-sm font-normal leading-normal">Integração de IA em sistemas existentes para otimizar processos e melhorar a eficiência.</p>
-                  </div>
-                </div>
-                <div class="flex flex-1 gap-3 rounded-lg border border-[#dbe0e6] bg-white p-4 flex-col">
-                  <div class="text-[#111418]" data-icon="PresentationChart" data-size="24px" data-weight="regular">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M216,40H136V24a8,8,0,0,0-16,0V40H40A16,16,0,0,0,24,56V176a16,16,0,0,0,16,16H79.36L57.75,219a8,8,0,0,0,12.5,10l29.59-37h56.32l29.59,37a8,8,0,1,0,12.5-10l-21.61-27H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,136H40V56H216V176ZM104,120v24a8,8,0,0,1-16,0V120a8,8,0,0,1,16,0Zm32-16v40a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm32-16v56a8,8,0,0,1-16,0V88a8,8,0,0,1,16,0Z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div class="flex flex-col gap-1">
-                    <h2 class="text-[#111418] text-base font-bold leading-tight">Consultoria em IA</h2>
-                    <p class="text-[#5f758c] text-sm font-normal leading-normal">
-                      Consultoria especializada para identificar oportunidades de aplicação de IA e definir a melhor estratégia.
-                    </p>
-                  </div>
-                </div>
-                <div class="flex flex-1 gap-3 rounded-lg border border-[#dbe0e6] bg-white p-4 flex-col">
-                  <div class="text-[#111418]" data-icon="User" data-size="24px" data-weight="regular">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                      <path
-                        d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div class="flex flex-col gap-1">
-                    <h2 class="text-[#111418] text-base font-bold leading-tight">UX com IA</h2>
-                    <p class="text-[#5f758c] text-sm font-normal leading-normal">
-                      Desenvolvimento de interfaces intuitivas e eficientes, potencializadas pela IA para melhorar a experiência do usuário.
-                    </p>
-                  </div>
+            <section id="sobre-nos">
+              <div class="flex flex-col gap-10 px-4 py-5 @container">
+                <div class="flex flex-col gap-4">
+                  <h1
+                    class="text-[#111418] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]"
+                  >
+                    Sobre nós
+                  </h1>
                 </div>
               </div>
-            </div>
-            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Principais dores</h2>
-            <p class="text-[#111418] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              As empresas buscam soluções de IA para resolver desafios como: otimização de processos, análise de dados complexos, personalização da experiência do cliente e
-              automação de tarefas repetitivas. Nossa experiência em sistemas com IA garante que sua empresa alcance resultados significativos.
-            </p>
-            <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Contato</h2>
+              <!--<h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Sobre nós</h2>-->
+              <p class="text-[#111418] text-base font-normal leading-normal pb-3 pt-1 px-4">
+                Somos uma consultoria especializada em soluções e experiência de Inteligência Artificial (IA) para empresas. Nossa expertise abrange  IA generativa, machine learning,
+                automação inteligente, sistemas internos com IA embarcada, experiência (CX) de sistemas com IA, desenvolvimento de interfaces conversacionais e agentes de IA customizados ajudando empresas a inovar e otimizar processos.
+              </p>
+            </section>
+            <section id="servicos">
+              <!--<h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Serviços</h2>-->
+              <div class="flex flex-col gap-10 px-4 py-10 @container">            
+                <div class="flex flex-col gap-4">
+                  <h1
+                    class="text-[#111418] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]"
+                  >
+                    Nossos serviços de IA
+                  </h1>
+                  <p class="text-[#111418] text-base font-normal leading-normal max-w-[720px]">Oferecemos um conjunto completo de serviços para integrar a IA em seu negócio.</p>
+                </div>
+                <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-0">
+                  <div class="flex flex-1 gap-3 rounded-lg border border-[#dbe0e6] bg-white p-4 flex-col">
+                    <div class="text-[#111418]" data-icon="Code" data-size="24px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                        <path
+                          d="M69.12,94.15,28.5,128l40.62,33.85a8,8,0,1,1-10.24,12.29l-48-40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3Zm176,27.7-48-40a8,8,0,1,0-10.24,12.3L227.5,128l-40.62,33.85a8,8,0,1,0,10.24,12.29l48-40a8,8,0,0,0,0-12.29ZM162.73,32.48a8,8,0,0,0-10.25,4.79l-64,176a8,8,0,0,0,4.79,10.26A8.14,8.14,0,0,0,96,224a8,8,0,0,0,7.52-5.27l64-176A8,8,0,0,0,162.73,32.48Z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <h2 class="text-[#111418] text-base font-bold leading-tight">Sem direção? Nós traçamos o caminho</h2>
+                      <p class="text-[#5f758c] text-sm font-normal leading-normal">Nossa consultoria analisa seu negócio e identifica onde a IA realmente gera valor — automatizando tarefas, reduzindo custos e aumentando resultados.</p>
+                    </div>
+                  </div>
+                  <div class="flex flex-1 gap-3 rounded-lg border border-[#dbe0e6] bg-white p-4 flex-col">
+                    <div class="text-[#111418]" data-icon="Gear" data-size="24px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                        <path
+                          d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.71,107.71,0,0,0-26.25-10.87,8,8,0,0,0-7.06,1.49L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Zm-16.1-6.5a73.93,73.93,0,0,1,0,8.68,8,8,0,0,0,1.74,5.48l14.19,17.73a91.57,91.57,0,0,1-6.23,15L187,173.11a8,8,0,0,0-5.1,2.64,74.11,74.11,0,0,1-6.14,6.14,8,8,0,0,0-2.64,5.1l-2.51,22.58a91.32,91.32,0,0,1-15,6.23l-17.74-14.19a8,8,0,0,0-5-1.75h-.48a73.93,73.93,0,0,1-8.68,0,8,8,0,0,0-5.48,1.74L100.45,215.8a91.57,91.57,0,0,1-15-6.23L82.89,187a8,8,0,0,0-2.64-5.1,74.11,74.11,0,0,1-6.14-6.14,8,8,0,0,0-5.1-2.64L46.43,170.6a91.32,91.32,0,0,1-6.23-15l14.19-17.74a8,8,0,0,0,1.74-5.48,73.93,73.93,0,0,1,0-8.68,8,8,0,0,0-1.74-5.48L40.2,100.45a91.57,91.57,0,0,1,6.23-15L69,82.89a8,8,0,0,0,5.1-2.64,74.11,74.11,0,0,1,6.14-6.14A8,8,0,0,0,82.89,69L85.4,46.43a91.32,91.32,0,0,1,15-6.23l17.74,14.19a8,8,0,0,0,5.48,1.74,73.93,73.93,0,0,1,8.68,0,8,8,0,0,0,5.48-1.74L155.55,40.2a91.57,91.57,0,0,1,15,6.23L173.11,69a8,8,0,0,0,2.64,5.1,74.11,74.11,0,0,1,6.14,6.14,8,8,0,0,0,5.1,2.64l22.58,2.51a91.32,91.32,0,0,1,6.23,15l-14.19,17.74A8,8,0,0,0,199.87,123.66Z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <h2 class="text-[#111418] text-base font-bold leading-tight">Seus dados são ouro — nós lapidamos</h2>
+                      <p class="text-[#5f758c] text-sm font-normal leading-normal">IA sem dados organizados é como um carro sem combustível.
+Ajudamos sua empresa a estruturar, limpar e integrar informações de diferentes fontes, transformando caos em inteligência.</p>
+                    </div>
+                  </div>
+                  <div class="flex flex-1 gap-3 rounded-lg border border-[#dbe0e6] bg-white p-4 flex-col">
+                    <div class="text-[#111418]" data-icon="PresentationChart" data-size="24px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                        <path
+                          d="M216,40H136V24a8,8,0,0,0-16,0V40H40A16,16,0,0,0,24,56V176a16,16,0,0,0,16,16H79.36L57.75,219a8,8,0,0,0,12.5,10l29.59-37h56.32l29.59,37a8,8,0,1,0,12.5-10l-21.61-27H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,136H40V56H216V176ZM104,120v24a8,8,0,0,1-16,0V120a8,8,0,0,1,16,0Zm32-16v40a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm32-16v56a8,8,0,0,1-16,0V88a8,8,0,0,1,16,0Z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <h2 class="text-[#111418] text-base font-bold leading-tight">Custo alto? A gente simplifica.</h2>
+                      <p class="text-[#5f758c] text-sm font-normal leading-normal">
+                        Sabemos onde investir e onde economizar.
+Integramos IA aos sistemas que você já usa, sem reinventar a roda — economizando tempo, dinheiro e energia.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex flex-1 gap-3 rounded-lg border border-[#dbe0e6] bg-white p-4 flex-col">
+                    <div class="text-[#111418]" data-icon="User" data-size="24px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                        <path
+                          d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <h2 class="text-[#111418] text-base font-bold leading-tight">Experiência de Sistemas com IA</h2>
+                      <p class="text-[#5f758c] text-sm font-normal leading-normal">
+                        UX/UI para sistemas de IA, melhorando interações homem-máquina. Elas usam IA para interação personalizada, imersiva e muito mais humanizada.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!--<section id="principais-dores">  
+              <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Quais são suas principais dores?</h2>
+              <p class="text-[#111418] text-base font-normal leading-normal pb-3 pt-1 px-4">
+                As empresas buscam soluções de IA para resolver desafios como: otimização de processos, análise de dados complexos, personalização da experiência do cliente e
+                automação de tarefas repetitivas. Nossa experiência em sistemas com IA garante que sua empresa alcance resultados significativos.
+              </p>
+            </section>-->
+            <!--<section id="principais-dores" class="px-16 py-20 bg-[#f9fafb] text-[#111418]" >-->
+            <section id="principais-dores" class="flex flex-col gap-10 px-4 py-10 @container bg-[#f9fafb] text-[#111418]">
+              <h2 class="text-4xl font-bold mb-1 text-left">Principais Dores das Empresas ao Implementar IA</h2>
+              <div class="max-w-5xl mx-auto">    
+
+                <!-- Item 1 -->
+                <div class="mb-12">
+                  <h3 class="text-2xl font-semibold mb-4 flex items-center gap-3">
+                    🧩 1. Falta de clareza sobre onde e como aplicar IA
+                  </h3>
+                  <p class="mb-3"><strong>Dor:</strong> Muitas empresas querem “usar IA”, mas não sabem para quê exatamente. Falta clareza sobre os casos de uso que realmente geram valor (automação, atendimento, previsão de demanda, personalização, etc.).</p>
+                  <p class="mb-3"><strong>Consequência:</strong> Projetos genéricos, experimentos isolados e sem ROI mensurável.</p>
+                  <p class="italic text-[#4b5563]">Exemplo: Adotar um chatbot genérico sem integração com o CRM — ele fala bonito, mas não resolve nada.</p>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="mb-12">
+                  <h3 class="text-2xl font-semibold mb-4 flex items-center gap-3">
+                    🧠 2. Escassez de dados estruturados e de qualidade
+                  </h3>
+                  <p class="mb-3"><strong>Dor:</strong> A IA precisa de dados limpos, acessíveis e bem organizados. A maioria das empresas tem dados espalhados em planilhas, sistemas antigos e sem padronização.</p>
+                  <p class="mb-3"><strong>Consequência:</strong> Modelos de IA imprecisos, falhas em automações e decisões baseadas em “ruído”.</p>
+                  <p class="italic text-[#4b5563]">Exemplo: Um modelo de previsão de vendas erra porque os históricos estão incompletos ou duplicados.</p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="mb-12">
+                  <h3 class="text-2xl font-semibold mb-4 flex items-center gap-3">
+                    👥 3. Falta de talentos e cultura de IA
+                  </h3>
+                  <p class="mb-3"><strong>Dor:</strong> A empresa pode até ter as ferramentas, mas não tem pessoas que entendam de IA — nem líderes que saibam integrá-la na estratégia.</p>
+                  <p class="mb-3"><strong>Consequência:</strong> As iniciativas morrem por falta de capacitação e resistência interna.</p>
+                  <p class="italic text-[#4b5563]">Exemplo: Equipes de marketing ou operações que veem a IA como “ameaça ao emprego” em vez de ferramenta de aumento de produtividade.</p>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="mb-12">
+                  <h3 class="text-2xl font-semibold mb-4 flex items-center gap-3">
+                    💸 4. Custo e complexidade de implementação
+                  </h3>
+                  <p class="mb-3"><strong>Dor:</strong> Integrar IA aos sistemas existentes (ERP, CRM, BI, etc.) é caro e complexo. Além disso, muitos fornecedores vendem soluções infladas e difíceis de manter.</p>
+                  <p class="mb-3"><strong>Consequência:</strong> O custo inicial alto e o tempo de retorno longo desmotivam.</p>
+                  <p class="italic text-[#4b5563]">Exemplo: Uma empresa média gasta mais em consultoria e infraestrutura do que o valor que a IA devolve em resultados.</p>
+                </div>
+
+                <!-- Item 5 -->
+                <div>
+                  <h3 class="text-2xl font-semibold mb-4 flex items-center gap-3">
+                    ⚖️ 5. Preocupações com segurança, privacidade e conformidade
+                  </h3>
+                  <p class="mb-3"><strong>Dor:</strong> Questões legais (como LGPD e GDPR), vazamento de dados e uso ético da IA geram medo.</p>
+                  <p class="mb-3"><strong>Consequência:</strong> Muitos projetos ficam parados na fase jurídica ou de compliance.</p>
+                  <p class="italic text-[#4b5563]">Exemplo: Empresas que evitam usar IA generativa porque temem expor dados sensíveis em prompts.</p>
+                </div>
+              </div>
+            </section>
+            <!--<h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Contato</h2>-->
+            <div class="flex flex-col gap-10 px-4 py-5 @container">
+                <div class="flex flex-col gap-4">
+                  <h1
+                    class="text-2xl font-semibold mb-4 flex items-center gap-3"
+                  >
+                    Para todas essas dores nós temos a solução
+                  </h1>
+                  <p class="text-[#111418] text-base items-center font-normal leading-normal max-w-[720px]">Fazemos a IA trabalhar por você e pelo seu cliente.</p>
+                </div>
+              </div>
             <div class="flex px-4 py-3 justify-center">
               <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#0680f9] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                class="whatsappButton flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#0680f9] text-white text-sm font-bold leading-normal tracking-[0.015em]"
               >
                 <span class="truncate">Fale conosco no WhatsApp</span>
               </button>
@@ -183,4 +267,27 @@
       </div>
     </div>
   </body>
+  <script>
+    document.querySelectorAll('nav a[data-target]').forEach(link => {
+      link.addEventListener('click', event => {
+        event.preventDefault();
+        const sectionId = link.getAttribute('data-target');
+        const target = document.getElementById(sectionId);
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 80, // ajusta conforme a altura do header
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    document.querySelectorAll(".whatsappButton").forEach(button => {
+      button.addEventListener("click", () => {
+        const whatsappNumber = "5511999999999"; // seu número com DDI e DDD
+        const message = "Olá! Gostaria de falar com um especialista.";
+        const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        window.open(url, "_blank");
+      });
+    });
+  </script>
 </html>
